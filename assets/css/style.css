@@ -96,8 +96,29 @@ header {
 /*-----------------------------Modal screen for rules*/
 .modal-dialog {
   color: var(--dark-bg);
+  text-align: center;
 }
 
+.modal-dialog > h3 {
+  text-align: center;
+}
+
+.bold {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.rule {
+  line-height: 1.5em;
+}
+
+.rule + .rule {
+  margin-top: 0.8em;
+}
+
+.rule > .fa-solid {
+  font-size: 1.5rem;
+}
 /*----------------------------- Game section */
 .game-outer-container {
   width: 70vw;
