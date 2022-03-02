@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--link for css stylesheet-->
     <link rel="stylesheet" href="./assets/css/style.css">
+    <!--link for fontawesome-->
+    <script src="https://kit.fontawesome.com/5cf6f031a9.js" crossorigin="anonymous"></script>
     <title>Document</title>
 </head>
 <body>
@@ -16,8 +18,9 @@
             <div id="title">
                 <h1>title</h1>
             </div>
-            <div id="help"></div>
-            <button type="submit">?</button>
+            <div id="help"> 
+                <button type="submit"><i class="fa-regular fa-circle-question"></i></button>
+            </div>
         </navbar>
     </header>
     <section class="game">
@@ -25,18 +28,21 @@
             <div class="options-container">
                 <div class="user-side">
                     <!--user's options are button because the user needs to click his option-->
-                    <button class="user-option" data-type="choice">rock</button>
-                    <button class="user-option" data-type="choice">paper</button>
-                    <button class="user-option" data-type="choice">scissors</button>
+                    <button class="user-option" data-type="choice"><i class="fa-solid fa-hand-back-fist"></i></button>
+                    <button class="user-option" data-type="choice"><i class="fa-solid fa-hand"></i></button>
+                    <button class="user-option" data-type="choice"><i class="fa-solid fa-hand-scissors"></i></button>
                     <!--for the expert level
                     <button class="user-option" data-type="choice">lizard</button>
                     <button class="user-option" data-type="choice">spock</button>-->
                 </div>
                 <div class="computer-side">
                     <!--computer's options aren't buttons because the computer won't click anything-->
-                    <span class="computer-option">rock</span>
-                    <span class="computer-option">paper</span>
-                    <span class="computer-option">scissors</span>
+                    <span class="computer-option"><i class="fa-solid fa-hand-back-fist"></i></span>
+                    <span class="computer-option"><i class="fa-solid fa-hand"></i></span>
+                    <span class="computer-option"><i class="fa-solid fa-hand-scissors"></i></span>
+                    <!--for the expert level
+                    <button class="user-option" data-type="choice"><i class="fa-solid fa-hand-lizard"></i></button>
+                    <button class="user-option" data-type="choice"><i class="fa-solid fa-hand-spock"></i></button>-->
                 </div>
             </div>
             <div id="round">
@@ -48,7 +54,9 @@
             </div>
         </div>
     </section>
-    <footer></footer>
+    <footer>
+        footer
+    </footer>
 
 
     <!--link for script file-->
