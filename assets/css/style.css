@@ -23,6 +23,12 @@
   outline: 1px solid red;
 }
 
+h1,
+h2,
+h3 {
+  font-family: var(--titles);
+}
+
 body {
   max-width: 2000px;
   width: 100vw;
@@ -39,8 +45,8 @@ body {
 
 /*----------------------Header*/
 header {
-  margin-top: 0;
   width: 100vw;
+  margin-top: -100px;
 }
 
 .navigation {
