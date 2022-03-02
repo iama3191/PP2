@@ -38,11 +38,17 @@ body {
 }
 
 /*----------------------Header*/
+header {
+  margin-top: 0;
+  width: 100vw;
+}
+
 .navigation {
   margin-left: auto;
   margin-right: auto;
   width: 100%;
   display: flex;
+  gap: 1em;
   justify-content: space-between;
   align-items: center;
   padding: 0.5em 1em 1em 1em;
@@ -82,11 +88,10 @@ body {
 }
 
 /*----------------------------- Game section */
-
 .game-outer-container {
   width: 70vw;
   max-width: 500px;
-  height: 60vh;
+  height: 50vh;
   margin-left: auto;
   margin-right: auto;
 }
@@ -113,7 +118,7 @@ body {
 .user-option {
   border-radius: 50%;
   background-color: var(--dark-bg);
-  border: 2px solid var(--light);
+  border: 4px solid var(--light);
   transition: transform 1s;
 }
 
@@ -137,7 +142,7 @@ body {
 .computer-option {
   border-radius: 50%;
   background-color: var(--dark-bg);
-  border: 2px solid var(--light);
+  border: 4px solid var(--light);
 }
 
 .computer-option > i {
