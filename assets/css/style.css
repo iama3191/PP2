@@ -84,8 +84,8 @@ body {
 /*----------------------------- Game section */
 
 .game-outer-container {
-  background-color: #ede56e;
   width: 70vw;
+  max-width: 500px;
   height: 60vh;
   margin-left: auto;
   margin-right: auto;
@@ -114,12 +114,12 @@ body {
   border-radius: 50%;
   background-color: var(--dark-bg);
   border: 2px solid var(--light);
-  transition: transform 1.2s;
+  transition: transform 1s;
 }
 
 .user-option > i {
   color: var(--light);
-  transition: transform 1.2s;
+  transition: transform 1s;
   border-radius: 50%;
   padding: 0.2em;
 }
@@ -144,4 +144,31 @@ body {
   color: var(--light);
   border-radius: 50%;
   padding: 0.2em;
+}
+
+#round {
+  width: 30%;
+  margin-top: 3em;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-family: var(--titles);
+  font-size: 0.8rem;
+}
+
+.score-container {
+  width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0.5em;
+  border: 1px solid var(--light);
+  text-align: center;
+  font-size: 1.3rem;
+}
+
+footer {
+  width: 100vw;
+  text-align: center;
+  background-color: var(--highlight-elements);
+  color: var(--dark-bg);
 }
