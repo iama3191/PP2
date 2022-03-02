@@ -33,6 +33,8 @@ body {
   max-width: 2000px;
   width: 100vw;
   height: 100vh;
+  margin-left: auto;
+  margin-right: auto;
   font-family: var(--text-normal);
   font-size: 16px;
   background-color: var(--dark-bg);
@@ -57,7 +59,7 @@ header {
   gap: 1em;
   justify-content: space-between;
   align-items: center;
-  padding: 0.5em 1em 1em 1em;
+  padding: 0.5em 1em 1em 0.5em;
 }
 
 #logo {
@@ -120,6 +122,13 @@ header {
   font-size: 1.5rem;
 }
 /*----------------------------- Game section */
+.game {
+  width: 100%;
+  height: auto;
+  padding-top: 4em;
+  justify-self: center;
+}
+
 .game-outer-container {
   width: 70vw;
   max-width: 500px;
@@ -208,4 +217,25 @@ footer {
   text-align: center;
   background-color: var(--highlight-elements);
   color: var(--dark-bg);
+}
+
+/*------------------------media queries*/
+
+@media screen and (min-width: 550px) {
+  #logo {
+    display: flex;
+  }
+
+  .navigation {
+    width: 90%;
+  }
+
+  .user-option,
+  .computer-option {
+    font-size: 4rem;
+  }
+
+  .score-container {
+    font-size: 2rem;
+  }
 }
