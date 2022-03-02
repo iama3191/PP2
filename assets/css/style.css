@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=McLaren&family=Open+Sans:wght@300;400&display=swap");
 
+/*-------------------------------------General*/
 :root {
   --dark-bg: #3c3843;
   --win: #27b927;
@@ -8,4 +9,56 @@
   --light: #fafdf6;
   --titles: "McLaren", cursive;
   --text-normal: "Open Sans", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 1px solid red;
+}
+
+body {
+  max-width: 2000px;
+  font-family: var(--text-normal);
+  font-size: 16px;
+  background-color: var(--dark-bg);
+  color: var(--light);
+}
+
+header {
+  width: 100vw;
+}
+
+.navigation {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5em 0.5em 1em 1em;
+}
+
+#logo {
+  display: none;
+}
+
+#title {
+  font-family: var(--titles);
+}
+
+#help {
+  background-color: var(--dark-bg);
+  border: none;
+}
+
+.fa-circle-question {
+  font-size: 1.5rem;
+  color: var(--highlight-elements);
 }
