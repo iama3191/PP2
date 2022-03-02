@@ -25,17 +25,19 @@
 
 body {
   max-width: 2000px;
+  width: 100vw;
+  height: 100vh;
   font-family: var(--text-normal);
   font-size: 16px;
   background-color: var(--dark-bg);
   color: var(--light);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 
 /*----------------------Header*/
-header {
-  width: 100vw;
-}
-
 .navigation {
   margin-left: auto;
   margin-right: auto;
@@ -77,4 +79,32 @@ header {
 
 .fa-question:hover {
   transform: scale(1.2);
+}
+
+/*----------------------------- Game section */
+
+.game-outer-container {
+  background-color: #ede56e;
+  width: 70vw;
+  height: 60vh;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.options-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.user-side,
+.computer-side {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.user-option,
+.computer-option {
+  font-size: 2rem;
 }
