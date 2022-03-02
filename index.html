@@ -4,11 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--link for css stylesheet-->
-    <link rel="stylesheet" href="./assets/css/style.css">
     <!--link for Bootstrap-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+      <!--link for css stylesheet-->
+      <link rel="stylesheet" href="./assets/css/style.css">
     <!--link for fontawesome-->
     <script src="https://kit.fontawesome.com/5cf6f031a9.js" crossorigin="anonymous"></script>
     <title>RPS(LS)</title>
@@ -25,32 +24,32 @@
                 <button id="help"
                 type="submit"><i class="fa-solid fa-question" data-bs-toggle="modal" data-bs-target="#staticBackdrop" aria-label="button for reading the rules"></i></i></button>
             </div>
-
+<!--Modal screen for rules. This is from Bootstrap-->
     <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header text-center">
-              <h3 class="modal-title" id="staticBackdropLabel">Rock, Paper, Scissors.</h3>
+              <h3 class="modal-title" id="staticBackdropLabel">Rock, Paper, Scissors</h3>
             </div>
             <div class="modal-body">
               <p class="modal-text">
-                Guess the word in <span class="bold">SIX TRIES</span> or less to win <span class="bold">SMITTEN!</span>
+                Click an option from the left-hand column and face your opponent.  
               </p>
               <p class="modal-text">
-                <span class="bold">NOTE:</span> All of the words in our word bank are five-letter words related to Valentine's Day and LOVE.
+                <span class="bold">How to win?</span>
+                <ul class="rules">
+                    <li class="rule"><i class="fa-solid fa-hand-scissors"></i> cuts <i class="fa-solid fa-hand"></i></li>
+                    <li class="rule"><i class="fa-solid fa-hand"></i> covers <i class="fa-solid fa-hand-back-fist"></i></li>
+                    <li class="rule"><i class="fa-solid fa-hand-back-fist"></i> crushes <i class="fa-solid fa-hand-lizard"></i></li>
+                    <li class="rule"><i class="fa-solid fa-hand-lizard"></i> poisons <i class="fa-solid fa-hand-spock"></i></li>
+                    <li class="rule"><i class="fa-solid fa-hand-spock"></i> smashes <i class="fa-solid fa-hand-scissors"></i></li>
+                    <li class="rule"><i class="fa-solid fa-hand-scissors"></i> decapitates <i class="fa-solid fa-hand-lizard"></i></li>
+                    <li class="rule"><i class="fa-solid fa-hand-lizard"></i> eats <i class="fa-solid fa-hand"></i></li>
+                    <li class="rule"><i class="fa-solid fa-hand"></i> disproves <i class="fa-solid fa-hand-spock"></i></li>
+                    <li class="rule"><i class="fa-solid fa-hand-spock"></i> vaporizes <i class="fa-solid fa-hand-back-fist"></i></li>
+                    <li class="rule"><i class="fa-solid fa-hand-back-fist"></i> crushes <i class="fa-solid fa-hand-scissors"></i></li>
+                </ul>
               </p>
-              <p class="modal-examples"> EXAMPLES </p>
-              <p class="modal-examples">
-               M<span class="not-word">A</span>RRY <span class="bold"> - "A" is not in the word at all.</span>
-               </p>
-
-               <p class="modal-examples">
-                LO<span class="in-word">V</span>ER <span class="bold">- "V" is in the word, but in a different spot</span>
-                </p>
-
-                <p class="modal-examples">
-                  HIT<span class="in-place">C</span>H <span class="bold"> - "C" is in word AND the spot you guessed!</span>
-                  </p>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" aria-label="button for starting the game">I'm Ready To Play!</button>
@@ -58,6 +57,7 @@
           </div>
         </div>
       </div>
+      <!--end of modal screen-->
         </navbar>
     </header>
     <!--main section for the game-->
@@ -99,8 +99,8 @@
 
 
     <!--link for script file-->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+   <!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
     <script src="./assets/js/script.js"></script>
 </body>

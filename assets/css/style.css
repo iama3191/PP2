@@ -93,6 +93,11 @@ header {
   transform: scale(1.2);
 }
 
+/*-----------------------------Modal screen for rules*/
+.modal-dialog {
+  color: var(--dark-bg);
+}
+
 /*----------------------------- Game section */
 .game-outer-container {
   width: 70vw;
