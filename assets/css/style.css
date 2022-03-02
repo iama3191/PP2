@@ -1,0 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=McLaren&family=Open+Sans:wght@300;400&display=swap");
+
+:root {
+  --dark-bg: #3c3843;
+  --win: #27b927;
+  --lose: #ee5252;
+  --highlight-elements: #ede56e;
+  --light: #fafdf6;
+  --titles: "McLaren", cursive;
+  --text-normal: "Open Sans", sans-serif;
+}
