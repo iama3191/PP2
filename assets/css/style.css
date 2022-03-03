@@ -249,11 +249,7 @@ footer {
 @media screen and (min-width: 768px) {
   header {
     padding-top: 2em;
-    margin-bottom: 3em;
-  }
-
-  .game {
-    margin-top: 3em;
+    margin-bottom: 2em;
   }
 
   .options-container {
