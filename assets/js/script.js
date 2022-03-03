@@ -10,12 +10,18 @@ document.addEventListener("DOMContentLoaded", function() {
         button.addEventListener("click", function() {
             let optionType = this.getAttribute("data-type");
             alert(optionType);
+            computerChoice();
         })
     }
 })
-//add eventListener to know what button is clicking the user  runGame(optionType);
 
 //function for computer's choice
+
+function computerChoice() {
+    let randomChoice = gameOptions[Math.floor(Math.random() * gameOptions.length)];
+    console.log(randomChoice);
+    return randomChoice;
+}
 
 //function for comparing user and computer's choice
 
