@@ -47,6 +47,7 @@ body {
 /*----------------------Header*/
 header {
   width: 100vw;
+  padding-top: 1em;
 }
 
 .navigation {
@@ -123,7 +124,7 @@ header {
 .game {
   width: 100%;
   height: auto;
-  padding-top: 2em;
+  padding-top: 1em;
   justify-self: center;
 }
 
@@ -204,7 +205,7 @@ header {
   width: 40%;
   margin-left: auto;
   margin-right: auto;
-  padding: 0.5em;
+  padding: 0.2em 0.5em;
   border: 3px solid var(--light);
   text-align: center;
   font-size: 1.3rem;
@@ -221,6 +222,7 @@ footer {
 
 /*------------------------media queries*/
 
+/*------------Media query for min-width: 550px and above*/
 @media screen and (min-width: 550px) {
   #logo {
     display: flex;
@@ -235,7 +237,29 @@ footer {
     font-size: 4rem;
   }
 
+  .game-outer-container {
+    margin-top: 2em;
+  }
   .score-container {
     font-size: 2rem;
+  }
+}
+
+/*------------Media query for min-width: 768px and above*/
+@media screen and (min-width: 768px) {
+  header {
+    margin-bottom: 3em;
+  }
+  .game-outer-container {
+    margin-top: 5em;
+  }
+
+  .options-container {
+    margin-bottom: 4em;
+  }
+
+  .user-side,
+  .computer-side {
+    gap: 4em;
   }
 }
