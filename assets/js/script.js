@@ -16,11 +16,10 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 })
 
-/**
- * function for getting a random option for the computer
- */
+//function for getting a random option for the computer
 function computerRandomChoice() {
 
+    //this will generate a random option from the ['rock','paper','scissors']
     let randomChoice = gameOptions[Math.floor(Math.random() * gameOptions.length)];
     return randomChoice;
 }
@@ -39,10 +38,10 @@ function mainGame(userChoice) {
             userLoses(userChoice, computerChoice);
         }
     }
+    playRound(userChoice, computerChoice);
 }
 
 //function that will change the style  of the user's button if he wins
-
 function userWins(user, computer) {
 
     //It will take the integer part of the user score and then will increment by 1 if the user wins
@@ -50,19 +49,26 @@ function userWins(user, computer) {
     document.getElementById('user-score').innerText = ++userScore;
     console.log(`3 you win! ${user} beats ${computer}`);
 }
+
 //function that will change the style  of the loser's button
 function userLoses(user, computer) {
     
     //It will take the integer part of the computer score and then will increment by 1 if the user loses
     let computerScore = parseInt(document.getElementById('computer-score').innerText);
     document.getElementById('computer-score').innerText = ++computerScore;
-    console.log(`3 you loose! ${computer}beats ${user} `);
+    console.log(`3 you loose! ${computer} beats ${user}`);
 }
 
 function draw(user, computer) {
    
-    console.log("it's a draw!")
+    console.log(`it's a draw! ${user} equals ${computer}`);
 }
-//function to update the score container
 
-//function to update the round counter
+//function to update the round counter. It will increase the round number everytime the user clicks on any option
+function playRound(user, computer) {
+    
+    if (user && computer) {
+        let roundNumber = parseInt(document.getElementById('round-number').innerText);
+        document.getElementById('round-number').innerText = ++roundNumber;
+    }
+}
