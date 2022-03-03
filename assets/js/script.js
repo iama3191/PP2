@@ -11,8 +11,7 @@ document.addEventListener("DOMContentLoaded", function() {
         button.addEventListener("click", function() {
             let optionType = this.getAttribute("data-type");
             console.log(`1 user's choice is ${optionType}`)
-            mainGame(optionType);
-            
+            mainGame(optionType); 
         })
     }
 })
@@ -26,23 +25,40 @@ function computerRandomChoice() {
     return randomChoice;
 }
 
-//function for run the game 
+//function for run the game. Will take user's choice as parameter and will compare, user's and computer's choices and say who won.
 function mainGame(userChoice) {
 
     let computerChoice = computerRandomChoice();
     console.log(`2 computer's choice is ${computerChoice}`)
     if (userChoice === computerChoice) {
-        console.log("this is a draw!");
+        draw(userChoice, computerChoice);
     } else { //if userChoice is different to computerSelection
         if (((userChoice === 'rock') && (computerChoice === 'scissors')) || ((userChoice === 'paper') && (computerChoice === 'rock')) || ((userChoice === 'scissors') && (computerChoice === 'paper'))) {
-            console.log(`You win! ${userChoice} beats ${computerChoice}`);
+            userWins(userChoice, computerChoice);
         } else {
-            console.log(`You loose! ${computerChoice} beats ${userChoice}`);
+            userLoses(userChoice, computerChoice);
         }
     }
 }
-//function for comparing user and computer's choice
 
+//function that will change the style  of the user's button if he wins
+
+function userWins(user, computer) {
+
+    //It will take the integer part of the old user score and then will increment by 1 
+    let userScore = parseInt(document.getElementById('user-score').innerText);
+    document.getElementById('user-score').innerText = ++userScore;
+    console.log(`3 you win! ${user} beats ${computer}`);
+}
+//function that will change the style  of the loser's button
+function userLoses(user, computer) {
+    console.log("you lose!")
+}
+
+function draw(user, computer) {
+   
+    console.log("it's a draw!")
+}
 //function to update the score container
 
 //function to update the round counter

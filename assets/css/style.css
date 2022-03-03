@@ -219,6 +219,20 @@ footer {
   color: var(--dark-bg);
 }
 
+.draw-glow {
+  border: none;
+  box-shadow: 0 0 10px 6px var(--highlight-elements);
+}
+
+.win-glow {
+  border: none;
+  box-shadow: 0 0 10px 6px var(--win);
+}
+
+.lose-glow {
+  border: none;
+  box-shadow: 0 0 10px 6px var(--lose);
+}
 /*------------------------media queries*/
 
 /*------------Media query for min-width: 550px and above*/
