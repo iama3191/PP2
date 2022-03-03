@@ -45,14 +45,18 @@ function mainGame(userChoice) {
 
 function userWins(user, computer) {
 
-    //It will take the integer part of the old user score and then will increment by 1 
+    //It will take the integer part of the user score and then will increment by 1 if the user wins
     let userScore = parseInt(document.getElementById('user-score').innerText);
     document.getElementById('user-score').innerText = ++userScore;
     console.log(`3 you win! ${user} beats ${computer}`);
 }
 //function that will change the style  of the loser's button
 function userLoses(user, computer) {
-    console.log("you lose!")
+    
+    //It will take the integer part of the computer score and then will increment by 1 if the user loses
+    let computerScore = parseInt(document.getElementById('computer-score').innerText);
+    document.getElementById('computer-score').innerText = ++computerScore;
+    console.log(`3 you loose! ${computer}beats ${user} `);
 }
 
 function draw(user, computer) {
