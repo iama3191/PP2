@@ -264,3 +264,13 @@ footer {
     gap: 4em;
   }
 }
+
+@media screen and (min-height: 800px) {
+  header {
+    margin-bottom: 0;
+  }
+
+  .game-outer-container {
+    margin-top: 2em;
+  }
+}
