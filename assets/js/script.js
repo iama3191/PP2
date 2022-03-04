@@ -82,6 +82,46 @@ function computerWins(computer) {
     }
 }
 
+//function that change the computer's option style if the computer wins
+function computerWins(computer) {
+
+    if (computer === 'rock') {
+        document.getElementById('rockC').classList.add('win-glow');
+        setTimeout(function (){ document.getElementById('rockC').classList.remove('win-glow')
+    }, 500);
+    }
+    if (computer === 'paper') {
+        document.getElementById('paperC').classList.add('win-glow');
+        setTimeout(function (){ document.getElementById('paperC').classList.remove('win-glow')
+    }, 500);
+    }
+    if (computer === 'scissors') {
+        document.getElementById('scissorsC').classList.add('win-glow');
+        setTimeout(function (){ document.getElementById('scissorsC').classList.remove('win-glow')
+    }, 500);
+    }
+}
+
+//function that change the computer's option style if the computer draws
+function computerDraws(computer) {
+
+    if (computer === 'rock') {
+        document.getElementById('rockC').classList.add('draw-glow');
+        setTimeout(function (){ document.getElementById('rockC').classList.remove('draw-glow')
+    }, 500);
+    }
+    if (computer === 'paper') {
+        document.getElementById('paperC').classList.add('draw-glow');
+        setTimeout(function (){ document.getElementById('paperC').classList.remove('draw-glow')
+    }, 500);
+    }
+    if (computer === 'scissors') {
+        document.getElementById('scissorsC').classList.add('draw-glow');
+        setTimeout(function (){ document.getElementById('scissorsC').classList.remove('draw-glow')
+    }, 500);
+    }
+}
+
 //function that will change the style  of the user's button if he wins
 function userWins(user, computer) {
 
@@ -115,6 +155,7 @@ function userLoses(user, computer) {
     console.log(`3 you loose! ${computer} beats ${user}`);
 }
 
+
 function draw(user, computer) {
 
     //Add a class to the user's button if it isn't the winner choice
@@ -123,7 +164,7 @@ function draw(user, computer) {
    setTimeout(function (){ document.getElementById(user).classList.remove('draw-glow')
   }, 500);
 
-
+    computerDraws(computer);
     console.log(`it's a draw! ${user} equals ${computer}`);
 }
 
