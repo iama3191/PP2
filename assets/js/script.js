@@ -174,5 +174,34 @@ function playRound(user, computer) {
     if (user && computer) {
         let roundNumber = parseInt(document.getElementById('round-number').innerText);
         document.getElementById('round-number').innerText = ++roundNumber;
+
+        gameOver(roundNumber);
     }
+
+   
+}
+
+//function for ending the game and announcing the ultimate winner
+function gameOver(roundNumber) {
+   
+  let finalUserScore = parseInt(document.getElementById('user-score').textContent);
+
+  let finalComputerScore = parseInt(document.getElementById('computer-score').textContent);
+
+  if (roundNumber > 5) {
+      alert(`Game Over!`);
+      if (finalUserScore === finalComputerScore) {
+          console.log(`this is a draw! And the final score is ${finalUserScore} vs ${finalComputerScore}`);
+      } else {
+          if (finalUserScore > finalComputerScore) {
+            console.log(`congrats. You win!! And the final score is ${finalUserScore} vs ${finalComputerScore}`)
+          } else {
+            console.log(`I'm so sorry. You lose!! And the final score is ${finalUserScore} vs ${finalComputerScore}`)
+          }
+      }
+      setTimeout(function (){ window.location.reload();
+    }, 5000); // I need a call to action to end the game
+      //window.location.reload();
+  }
+  
 }
