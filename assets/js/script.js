@@ -21,6 +21,7 @@ function computerRandomChoice() {
 
     //this will generate a random option from the ['rock','paper','scissors']
     let randomChoice = gameOptions[Math.floor(Math.random() * gameOptions.length)];
+
     return randomChoice;
 }
 
@@ -41,6 +42,25 @@ function mainGame(userChoice) {
     playRound(userChoice, computerChoice);
 }
 
+//function that change the computer's option style
+function computerLoses(computer) {
+
+    if (computer === 'rock') {
+        document.getElementById('rockC').classList.add('lose-glow');
+        setTimeout(function (){ document.getElementById('rockC').classList.remove('lose-glow')
+    }, 500);
+    }
+    if (computer === 'paper') {
+        document.getElementById('paperC').classList.add('lose-glow');
+        setTimeout(function (){ document.getElementById('rockC').classList.remove('lose-glow')
+    }, 500);
+    }
+    if (computer === 'scissors') {
+        document.getElementById('scissorsC').classList.add('lose-glow');
+        setTimeout(function (){ document.getElementById('rockC').classList.remove('lose-glow')
+    }, 500);
+    }
+}
 //function that will change the style  of the user's button if he wins
 function userWins(user, computer) {
 
@@ -51,7 +71,9 @@ function userWins(user, computer) {
     document.getElementById(user).classList.add('win-glow');
     // code from https://www.w3schools.com/jsref/met_win_settimeout.asp This will remove the lose-glow class
     setTimeout(function (){ document.getElementById(user).classList.remove('win-glow')
-    }, 1000);
+    }, 500);
+
+    computerLoses(computer);
     console.log(`3 you win! ${user} beats ${computer}`);
 }
 
@@ -65,7 +87,7 @@ function userLoses(user, computer) {
      document.getElementById(user).classList.add('lose-glow');
       // code from https://www.w3schools.com/jsref/met_win_settimeout.asp This will remove the lose-glow class
      setTimeout(function (){ document.getElementById(user).classList.remove('lose-glow')
-    }, 1000);
+    }, 500);
     console.log(`3 you loose! ${computer} beats ${user}`);
 }
 
@@ -75,7 +97,9 @@ function draw(user, computer) {
     document.getElementById(user).classList.add('draw-glow');
     // code from https://www.w3schools.com/jsref/met_win_settimeout.asp This will remove the lose-glow class
    setTimeout(function (){ document.getElementById(user).classList.remove('draw-glow')
-  }, 1000);
+  }, 500);
+
+
     console.log(`it's a draw! ${user} equals ${computer}`);
 }
 
