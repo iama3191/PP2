@@ -168,7 +168,7 @@ header {
 }
 
 .user-option:hover {
-  transform: scale(1.2);
+  /*transform: scale(1.2); I'm not sure about this effect*/
   border: none;
 }
 
@@ -220,7 +220,7 @@ footer {
 }
 
 .draw-glow {
-  border-color: var(--highlight-elements);
+  background-color: var(--highlight-elements);
   box-shadow: 0 0 10px 6px var(--highlight-elements);
 }
 

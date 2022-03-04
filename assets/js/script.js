@@ -47,7 +47,11 @@ function userWins(user, computer) {
     //It will take the integer part of the user score and then will increment by 1 if the user wins
     let userScore = parseInt(document.getElementById('user-score').innerText);
     document.getElementById('user-score').innerText = ++userScore;
+    //Add a class to the user's button if it is the winner choice
     document.getElementById(user).classList.add('win-glow');
+    // code from https://www.w3schools.com/jsref/met_win_settimeout.asp This will remove the lose-glow class
+    setTimeout(function (){ document.getElementById(user).classList.remove('win-glow')
+    }, 1000);
     console.log(`3 you win! ${user} beats ${computer}`);
 }
 
@@ -57,11 +61,21 @@ function userLoses(user, computer) {
     //It will take the integer part of the computer score and then will increment by 1 if the user loses
     let computerScore = parseInt(document.getElementById('computer-score').innerText);
     document.getElementById('computer-score').innerText = ++computerScore;
+     //Add a class to the user's button if it isn't the winner choice
+     document.getElementById(user).classList.add('lose-glow');
+      // code from https://www.w3schools.com/jsref/met_win_settimeout.asp This will remove the lose-glow class
+     setTimeout(function (){ document.getElementById(user).classList.remove('lose-glow')
+    }, 1000);
     console.log(`3 you loose! ${computer} beats ${user}`);
 }
 
 function draw(user, computer) {
-   
+
+    //Add a class to the user's button if it isn't the winner choice
+    document.getElementById(user).classList.add('draw-glow');
+    // code from https://www.w3schools.com/jsref/met_win_settimeout.asp This will remove the lose-glow class
+   setTimeout(function (){ document.getElementById(user).classList.remove('draw-glow')
+  }, 1000);
     console.log(`it's a draw! ${user} equals ${computer}`);
 }
 
