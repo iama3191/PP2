@@ -220,17 +220,17 @@ footer {
 }
 
 .draw-glow {
-  border: none;
+  border-color: var(--highlight-elements);
   box-shadow: 0 0 10px 6px var(--highlight-elements);
 }
 
 .win-glow {
-  border: none;
+  background-color: var(--win);
   box-shadow: 0 0 10px 6px var(--win);
 }
 
 .lose-glow {
-  border: none;
+  background-color: var(--lose);
   box-shadow: 0 0 10px 6px var(--lose);
 }
 /*------------------------media queries*/

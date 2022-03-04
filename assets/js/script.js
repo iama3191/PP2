@@ -1,15 +1,15 @@
-//Declaring constants
+//Constants declaration
 const gameOptions = ['rock','paper','scissors'];
 
 //Wait for the DOM to finish loading before running the game
 //Get the button elements and add event listeners to them
-document.addEventListener("DOMContentLoaded", function() {
-    let buttons = document.getElementsByTagName("button");
+document.addEventListener('DOMContentLoaded', function() {
+    let buttons = document.getElementsByTagName('button');
 
     for (let button of buttons) {
 
-        button.addEventListener("click", function() {
-            let optionType = this.getAttribute("data-type");
+        button.addEventListener('click', function() {
+            let optionType = this.getAttribute('id');
             console.log(`1 user's choice is ${optionType}`)
             mainGame(optionType); 
         })
@@ -47,6 +47,7 @@ function userWins(user, computer) {
     //It will take the integer part of the user score and then will increment by 1 if the user wins
     let userScore = parseInt(document.getElementById('user-score').innerText);
     document.getElementById('user-score').innerText = ++userScore;
+    document.getElementById(user).classList.add('win-glow');
     console.log(`3 you win! ${user} beats ${computer}`);
 }
 
