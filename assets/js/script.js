@@ -200,8 +200,7 @@ function gameOver(roundNumber) {
           }
       }
       setTimeout(function (){ window.location.reload();
-    }, 5000); // I need a call to action to end the game
+    }, 2000); // I need a call to action to end the game
       //window.location.reload();
-  }
-  
+  } 
 }

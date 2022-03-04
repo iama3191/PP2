@@ -210,6 +210,31 @@ header {
   font-size: 1.3rem;
 }
 
+/*--------------------modal screen for game over*/
+
+.game-results {
+  display: none; /* Hidden by default */
+  position: absolute; /* Stay in place */
+  z-index: 1000000000; /* Sit on top */
+  left: 25em;
+  top: 10em;
+  width: 80vh; /* Full width */
+  height: auto; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: var(--highlight-elements); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.results-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  height: auto;
+  color: var(--dark-bg); /* Could be more or less, depending on screen size */
+}
 footer {
   width: 100vw;
   position: fixed;
