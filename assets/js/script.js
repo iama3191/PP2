@@ -42,7 +42,7 @@ function mainGame(userChoice) {
     playRound(userChoice, computerChoice);
 }
 
-//function that change the computer's option style
+//function that change the computer's option style if the computer loses
 function computerLoses(computer) {
 
     if (computer === 'rock') {
@@ -52,15 +52,36 @@ function computerLoses(computer) {
     }
     if (computer === 'paper') {
         document.getElementById('paperC').classList.add('lose-glow');
-        setTimeout(function (){ document.getElementById('rockC').classList.remove('lose-glow')
+        setTimeout(function (){ document.getElementById('paperC').classList.remove('lose-glow')
     }, 500);
     }
     if (computer === 'scissors') {
         document.getElementById('scissorsC').classList.add('lose-glow');
-        setTimeout(function (){ document.getElementById('rockC').classList.remove('lose-glow')
+        setTimeout(function (){ document.getElementById('scissorsC').classList.remove('lose-glow')
     }, 500);
     }
 }
+
+//function that change the computer's option style if the computer wins
+function computerWins(computer) {
+
+    if (computer === 'rock') {
+        document.getElementById('rockC').classList.add('win-glow');
+        setTimeout(function (){ document.getElementById('rockC').classList.remove('win-glow')
+    }, 500);
+    }
+    if (computer === 'paper') {
+        document.getElementById('paperC').classList.add('win-glow');
+        setTimeout(function (){ document.getElementById('paperC').classList.remove('win-glow')
+    }, 500);
+    }
+    if (computer === 'scissors') {
+        document.getElementById('scissorsC').classList.add('win-glow');
+        setTimeout(function (){ document.getElementById('scissorsC').classList.remove('win-glow')
+    }, 500);
+    }
+}
+
 //function that will change the style  of the user's button if he wins
 function userWins(user, computer) {
 
@@ -88,6 +109,9 @@ function userLoses(user, computer) {
       // code from https://www.w3schools.com/jsref/met_win_settimeout.asp This will remove the lose-glow class
      setTimeout(function (){ document.getElementById(user).classList.remove('lose-glow')
     }, 500);
+
+    computerWins(computer);
+
     console.log(`3 you loose! ${computer} beats ${user}`);
 }
 
