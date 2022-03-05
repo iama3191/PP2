@@ -175,32 +175,36 @@ function playRound(user, computer) {
         let roundNumber = parseInt(document.getElementById('round-number').innerText);
         document.getElementById('round-number').innerText = ++roundNumber;
 
-        gameOver(roundNumber);
-    }
-
-   
+        if (roundNumber > 5) {
+            gameOver(user,computer);
+        }   
+    }  
 }
 
 //function for ending the game and announcing the ultimate winner
-function gameOver(roundNumber) {
+function gameOver() {
    
-  let finalUserScore = parseInt(document.getElementById('user-score').textContent);
+  const finalUserScore = parseInt(document.getElementById('user-score').textContent);
+  const finalComputerScore = parseInt(document.getElementById('computer-score').textContent);
 
-  let finalComputerScore = parseInt(document.getElementById('computer-score').textContent);
+  const answerBox = document.getElementsByClassName('game-results')[0];
+  const battleText = document.getElementById('game-over-text');
 
-  if (roundNumber > 5) {
-      alert(`Game Over!`);
+  let restart = document.getElementsByClassName('start')[0];
+  answerBox.style.display = 'block';
+
       if (finalUserScore === finalComputerScore) {
-          console.log(`this is a draw! And the final score is ${finalUserScore} vs ${finalComputerScore}`);
+        battleText.innerHTML = `this is a draw! And the final score is ${finalUserScore} vs ${finalComputerScore}`;
       } else {
           if (finalUserScore > finalComputerScore) {
-            console.log(`congrats. You win!! And the final score is ${finalUserScore} vs ${finalComputerScore}`)
+            battleText.innerHTML = `congrats. You win!! And the final score is ${finalUserScore} vs ${finalComputerScore}`;
           } else {
-            console.log(`I'm so sorry. You lose!! And the final score is ${finalUserScore} vs ${finalComputerScore}`)
+            battleText.innerHTML = `I'm so sorry. You lose!! And the final score is ${finalUserScore} vs ${finalComputerScore}`;
           }
       }
-      setTimeout(function (){ window.location.reload();
-    }, 2000); // I need a call to action to end the game
+    restart.addEventListener('click', function() {
+        answerBox.style.display = 'none';
+        window.location.reload();
+    })
       //window.location.reload();
   } 
-}
