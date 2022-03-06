@@ -10,9 +10,13 @@ document.addEventListener('DOMContentLoaded', function() {
     for (let button of buttons) {
 
         button.addEventListener('click', function() {
-            let optionType = this.getAttribute('id');
+            if(this.getAttribute('id')==='help') {
+                showHelp();
+            } else {
+                let optionType = this.getAttribute('id');
             console.log(`1 user's choice is ${optionType}`)
             mainGame(optionType); 
+            }
         })
     }
 })
