@@ -104,11 +104,12 @@ header {
 /*-----------------------------Modal screen for rules*/
 .modal {
   display: none;
-  position: absolute;
+  position: fixed;
+  height: 100%;
+  width: 100%;
   top: 0;
   left: 0;
-  z-index: 1000000000;
-  width: 100%;
+  z-index: 1;
   overflow: auto;
   background-color: rgb(0, 0, 0, 0.5);
 }
@@ -282,7 +283,7 @@ header {
 }
 
 .start,
-#back-game {
+.back-game {
   padding: 0.5em 1em;
   border-radius: 30px;
   border: 2px solid var(--win);
@@ -296,7 +297,7 @@ header {
 }
 
 .start:hover,
-#back-game {
+.back-game:hover {
   background-color: var(--win);
   color: var(--light);
 }

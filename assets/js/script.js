@@ -21,12 +21,22 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 })
 
+//Function to show modal screen for the help button
+function showHelp() {
+
+    const backToGame = document.getElementsByClassName('back-game')[0];
+    document.getElementsByClassName('modal')[0].style.display = 'block';
+
+    backToGame.addEventListener('click', function () {
+        document.getElementsByClassName('modal')[0].style.display = 'none';
+    })
+}
+
 //function for getting a random option for the computer
 function computerRandomChoice() {
 
     //this will generate a random option from the ['rock','paper','scissors']
     let randomChoice = gameOptions[Math.floor(Math.random() * gameOptions.length)];
-
     return randomChoice;
 }
 
