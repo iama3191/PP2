@@ -36,6 +36,7 @@ When children play the game, their decisions are made randomly. However, when ad
     - [Wireframes](#wireframes)
 
 - [Technologies Used](#technologies-used)
+  - [Tools](#tools)
 - [Testing](#testing)
   - [Navigation](#navigation)
 
@@ -85,6 +86,18 @@ And for paragraphs Open San Serif is used, it is a clear and simple font that do
 4. ### Wireframes
 
 ## Technologies Used
+
+### Tools
+
+- [Google fonts](https://fonts.google.com/)
+- [Balsamiq wireframes](<https://balsamiq.com/>)
+- [Coolors](https://coolors.co/3c3843-57db57-ede56e-ee5252-fafdf6)
+- [Am I responsive](http://ami.responsivedesign.is/#)
+- [Outwrite](https://www.outwrite.com/)
+- [Bootstrap](https://getbootstrap.com/)
+- [W3C validator](https://validator.w3.org/)
+- [Jigsaw validator](https://jigsaw.w3.org/css-validator/)
+- [JSHint](https://jshint.com/)
 
 ## Testing
 
