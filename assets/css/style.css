@@ -54,18 +54,26 @@ header {
   margin-right: auto;
   width: 100%;
   display: flex;
-  gap: 1em;
-  justify-content: space-between;
+  gap: 3em;
+  justify-content: center;
   align-items: center;
   padding: 1em;
 }
 
 #logo {
   display: none;
+  font-family: var(--titles);
+  font-size: 2.5rem;
+}
+
+.symbols {
+  color: var(--highlight-elements);
+  font-size: 2.7rem;
 }
 
 #title {
   font-family: var(--titles);
+  padding-left: 2em;
 }
 
 #help {
@@ -313,10 +321,6 @@ footer {
 
 /*------------Media query for min-width: 550px and above*/
 @media screen and (min-width: 550px) {
-  #logo {
-    display: flex;
-  }
-
   .navigation {
     width: 90%;
   }
@@ -353,6 +357,15 @@ footer {
 
 /*------------Media query for min-width: 768px and above*/
 @media screen and (min-width: 768px) {
+  #logo {
+    display: block;
+  }
+
+  .navigation {
+    justify-content: space-between;
+    padding-left: 0;
+  }
+
   header {
     padding-top: 2em;
   }
@@ -365,5 +378,9 @@ footer {
   .user-side,
   .computer-side {
     gap: 4em;
+  }
+
+  #title {
+    visibility: hidden;
   }
 }
