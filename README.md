@@ -54,6 +54,20 @@ When children play the game, their decisions are made randomly. However, when ad
 
 ### Colour Theory
 
+The colors used for this game were chosen according to how they are appreciated in various aspects of daily life. The color-coding in the game is familiar to us, and we already know their meanings, so the game can be pretty intuitive by the colors. The colors are gray, green, red, yellow, and white.
+
+![Color Palette for the game](assets/images/color-palette.png)
+
+The gray color is a diplomatic color, as it is between black and white, and will be used for the background of the site. On this way, the user can feel that it's in a neutral space facing his challenge.
+
+The color green evokes powerful emotions, and it's a dominant color in nature that makes us think of growth. It is also associated with rest, security and progress. This color will highlight who is winning on each round.
+
+The red color on nature is a warning sign, usually when something is red, it is poisonous or harmful in some way. This color will be used to highlight who is losing on each round.
+
+The white color is bright and can create a sense of space or add highlights. This color can symbolize a new beginning or fresh start. This color will be used to highlight user's decision and for texts.
+
+The yellow stimulates our nerves, glands and brains, makes us more alert and energetic, stimulates our memory and promotes communication. It is a color that promotes activity and interaction. For this reason, it is used for the rule button at the top of the page and to highlight a draw.
+
 ### Features
 
 1. ### Navigation bar
