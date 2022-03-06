@@ -28,6 +28,7 @@ When children play the game, their decisions are made randomly. However, when ad
 - [UX Design](#ux-design)
   - [User Stories](#user-stories)
   - [Colour Theory](#colour-theory)
+  - [Typography](#typography)
   - [Features](#features)
     - [Navigation bar](#navigation-bar)
     - [Help button](#help-button)
@@ -67,6 +68,11 @@ The red color on nature is a warning sign, usually when something is red, it is 
 The white color is bright and can create a sense of space or add highlights. This color can symbolize a new beginning or fresh start. This color will be used to highlight user's decision and for texts.
 
 The yellow stimulates our nerves, glands and brains, makes us more alert and energetic, stimulates our memory and promotes communication. It is a color that promotes activity and interaction. For this reason, it is used for the rule button at the top of the page and to highlight a draw.
+
+### Typography
+
+For headings and important texts, Mclaren regular 400 is used because it is a readable font with a slightly playful look that complements the rest of the site.
+And for paragraphs Open San Serif is used, it is a clear and simple font that does not distract the user. And it is readable for the most important text (rules).
 
 ### Features
 
