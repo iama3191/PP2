@@ -274,9 +274,23 @@ footer {
   color: var(--dark-bg);
 }
 
-.draw-glow {
+/*-------------------Effects to announce the results */
+.win-computer {
+  background-color: var(--win);
+  box-shadow: 0 0 10px 6px var(--win);
+  border: none;
+}
+
+.lose-computer {
+  background-color: var(--lose);
+  box-shadow: 0 0 10px 6px var(--lose);
+  border: none;
+}
+
+.draw-computer {
   background-color: var(--highlight-elements);
   box-shadow: 0 0 10px 6px var(--highlight-elements);
+  border: none;
 }
 
 .win-glow {
@@ -288,6 +302,13 @@ footer {
   background-color: var(--lose);
   box-shadow: 0 0 10px 6px var(--lose);
 }
+
+.draw-glow {
+  background-color: var(--highlight-elements);
+  box-shadow: 0 0 10px 6px var(--highlight-elements);
+  border: none;
+}
+
 /*------------------------media queries*/
 
 /*------------Media query for min-width: 550px and above*/

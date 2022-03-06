@@ -46,18 +46,18 @@ function mainGame(userChoice) {
 function computerLoses(computer) {
 
     if (computer === 'rock') {
-        document.getElementById('rockC').classList.add('lose-glow');
-        setTimeout(function (){ document.getElementById('rockC').classList.remove('lose-glow')
+        document.getElementById('rockC').classList.add('lose-computer');
+        setTimeout(function (){ document.getElementById('rockC').classList.remove('lose-computer')
     }, 500);
     }
     if (computer === 'paper') {
-        document.getElementById('paperC').classList.add('lose-glow');
-        setTimeout(function (){ document.getElementById('paperC').classList.remove('lose-glow')
+        document.getElementById('paperC').classList.add('lose-computer');
+        setTimeout(function (){ document.getElementById('paperC').classList.remove('lose-computer')
     }, 500);
     }
     if (computer === 'scissors') {
-        document.getElementById('scissorsC').classList.add('lose-glow');
-        setTimeout(function (){ document.getElementById('scissorsC').classList.remove('lose-glow')
+        document.getElementById('scissorsC').classList.add('lose-computer');
+        setTimeout(function (){ document.getElementById('scissorsC').classList.remove('lose-computer')
     }, 500);
     }
 }
@@ -66,38 +66,18 @@ function computerLoses(computer) {
 function computerWins(computer) {
 
     if (computer === 'rock') {
-        document.getElementById('rockC').classList.add('win-glow');
-        setTimeout(function (){ document.getElementById('rockC').classList.remove('win-glow')
+        document.getElementById('rockC').classList.add('win-computer');
+        setTimeout(function (){ document.getElementById('rockC').classList.remove('win-computer')
     }, 500);
     }
     if (computer === 'paper') {
-        document.getElementById('paperC').classList.add('win-glow');
-        setTimeout(function (){ document.getElementById('paperC').classList.remove('win-glow')
+        document.getElementById('paperC').classList.add('win-computer');
+        setTimeout(function (){ document.getElementById('paperC').classList.remove('win-computer')
     }, 500);
     }
     if (computer === 'scissors') {
-        document.getElementById('scissorsC').classList.add('win-glow');
-        setTimeout(function (){ document.getElementById('scissorsC').classList.remove('win-glow')
-    }, 500);
-    }
-}
-
-//function that change the computer's option style if the computer wins
-function computerWins(computer) {
-
-    if (computer === 'rock') {
-        document.getElementById('rockC').classList.add('win-glow');
-        setTimeout(function (){ document.getElementById('rockC').classList.remove('win-glow')
-    }, 500);
-    }
-    if (computer === 'paper') {
-        document.getElementById('paperC').classList.add('win-glow');
-        setTimeout(function (){ document.getElementById('paperC').classList.remove('win-glow')
-    }, 500);
-    }
-    if (computer === 'scissors') {
-        document.getElementById('scissorsC').classList.add('win-glow');
-        setTimeout(function (){ document.getElementById('scissorsC').classList.remove('win-glow')
+        document.getElementById('scissorsC').classList.add('win-computer');
+        setTimeout(function (){ document.getElementById('scissorsC').classList.remove('win-computer')
     }, 500);
     }
 }
@@ -106,18 +86,18 @@ function computerWins(computer) {
 function computerDraws(computer) {
 
     if (computer === 'rock') {
-        document.getElementById('rockC').classList.add('draw-glow');
-        setTimeout(function (){ document.getElementById('rockC').classList.remove('draw-glow')
+        document.getElementById('rockC').classList.add('draw-computer');
+        setTimeout(function (){ document.getElementById('rockC').classList.remove('draw-computer')
     }, 500);
     }
     if (computer === 'paper') {
-        document.getElementById('paperC').classList.add('draw-glow');
-        setTimeout(function (){ document.getElementById('paperC').classList.remove('draw-glow')
+        document.getElementById('paperC').classList.add('draw-computer');
+        setTimeout(function (){ document.getElementById('paperC').classList.remove('draw-computer')
     }, 500);
     }
     if (computer === 'scissors') {
-        document.getElementById('scissorsC').classList.add('draw-glow');
-        setTimeout(function (){ document.getElementById('scissorsC').classList.remove('draw-glow')
+        document.getElementById('scissorsC').classList.add('draw-computer');
+        setTimeout(function (){ document.getElementById('scissorsC').classList.remove('draw-computer')
     }, 500);
     }
 }
