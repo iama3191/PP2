@@ -170,7 +170,7 @@ function playRound(user, computer) {
         let roundNumber = parseInt(document.getElementById('round-number').innerText);
         document.getElementById('round-number').innerText = ++roundNumber;
 
-        if (roundNumber > 5) {
+        if (roundNumber === 5) {
             gameOver(user,computer);
         }   
     }  
