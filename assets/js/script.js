@@ -1,6 +1,7 @@
-//Constants declaration
+//constants for the game. Available options.
 const gameOptions = ['rock','paper','scissors'];
 
+//From Math Project, Code Institute and adapted for this project 
 //Wait for the DOM to finish loading before running the game
 //Get the button elements and add event listeners to them
 document.addEventListener('DOMContentLoaded', function() {
@@ -25,7 +26,7 @@ function computerRandomChoice() {
     return randomChoice;
 }
 
-//function for run the game. Will take user's choice as parameter and will compare, user's and computer's choices and say who won.
+//function for running the game. Will take user's choice as parameter and will compare, user's and computer's choices
 function mainGame(userChoice) {
 
     let computerChoice = computerRandomChoice();
@@ -42,7 +43,7 @@ function mainGame(userChoice) {
     playRound(userChoice, computerChoice);
 }
 
-//function that change the computer's option style if the computer loses
+//function for changing the computer's style if the computer loses
 function computerLoses(computer) {
 
     if (computer === 'rock') {
@@ -62,7 +63,7 @@ function computerLoses(computer) {
     }
 }
 
-//function that change the computer's option style if the computer wins
+//function for changing the computer's style if the computer wins
 function computerWins(computer) {
 
     if (computer === 'rock') {
@@ -82,7 +83,7 @@ function computerWins(computer) {
     }
 }
 
-//function that change the computer's option style if the computer draws
+//function for changing the computer's style if the computer draws
 function computerDraws(computer) {
 
     if (computer === 'rock') {
@@ -102,7 +103,7 @@ function computerDraws(computer) {
     }
 }
 
-//function that will change the style  of the user's button if he wins
+//function for changing the user's button style if he wins
 function userWins(user, computer) {
 
     //It will take the integer part of the user score and then will increment by 1 if the user wins
@@ -118,7 +119,7 @@ function userWins(user, computer) {
     console.log(`3 you win! ${user} beats ${computer}`);
 }
 
-//function that will change the style  of the loser's button
+//function for changing  the style  of the user's button if he loses
 function userLoses(user, computer) {
     
     //It will take the integer part of the computer score and then will increment by 1 if the user loses
@@ -135,7 +136,7 @@ function userLoses(user, computer) {
     console.log(`3 you loose! ${computer} beats ${user}`);
 }
 
-
+//function for changing  the style  of the user's button if he draws
 function draw(user, computer) {
 
     //Add a class to the user's button if it isn't the winner choice
@@ -163,28 +164,30 @@ function playRound(user, computer) {
 
 //function for ending the game and announcing the ultimate winner
 function gameOver() {
-   
+   //the final score from the 5th round
   const finalUserScore = parseInt(document.getElementById('user-score').textContent);
   const finalComputerScore = parseInt(document.getElementById('computer-score').textContent);
 
+  //this is for the modal screen that will be shown after game over
   const answerBox = document.getElementsByClassName('game-results')[0];
   const battleText = document.getElementById('game-over-text');
-
   let restart = document.getElementsByClassName('start')[0];
+
   answerBox.style.display = 'block';
 
       if (finalUserScore === finalComputerScore) {
-        battleText.innerHTML = `this is a draw! And the final score is ${finalUserScore} vs ${finalComputerScore}`;
+        battleText.innerHTML = `This is a draw! And the final score is ${finalUserScore} vs ${finalComputerScore}`;
       } else {
           if (finalUserScore > finalComputerScore) {
-            battleText.innerHTML = `congrats. You win!! And the final score is ${finalUserScore} vs ${finalComputerScore}`;
+            battleText.innerHTML = `Congratulations! You win the game!! And the final score is ${finalUserScore} vs ${finalComputerScore}`;
           } else {
             battleText.innerHTML = `I'm so sorry. You lose!! And the final score is ${finalUserScore} vs ${finalComputerScore}`;
           }
       }
+
+      //this will give to the user to restart the game
     restart.addEventListener('click', function() {
         answerBox.style.display = 'none';
         window.location.reload();
     })
-      //window.location.reload();
   } 
