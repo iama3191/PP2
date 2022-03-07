@@ -77,12 +77,35 @@ header {
   padding-left: 2.4em;
 }
 
+.user-button-game {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+}
+
 #help {
   background-color: var(--dark-bg);
-  width: 25px;
-  height: 25px;
+  width: 26px;
+  height: 26px;
   border-radius: 20px;
   border: 2px solid var(--highlight-elements);
+  transition: transform 1s;
+}
+
+.restart {
+  background-color: var(--lose);
+  border-radius: 20px;
+  width: 30px;
+  height: 30px;
+  border: 2px solid var(--light);
+  margin-right: 1em;
+  transition: transform 1s;
+}
+
+.fa-rotate-right {
+  color: var(--light);
+  margin: 3px auto;
+  font-size: 1rem;
   transition: transform 1s;
 }
 
@@ -99,7 +122,14 @@ header {
   border: none;
 }
 
-.fa-question:hover {
+.restart:hover {
+  box-shadow: 0 0 10px 5px var(--lose);
+  transform: scale(1.2);
+  border: none;
+}
+
+.fa-question:hover,
+.fa-rotate-right:hover {
   transform: scale(1.2);
 }
 
@@ -398,7 +428,7 @@ footer {
 @media screen and (min-width: 768px) {
   #logo {
     display: block;
-    font-size: 3rem;
+
     margin-left: 2em;
   }
 

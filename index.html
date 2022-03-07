@@ -13,14 +13,16 @@
 <body>
    <!--header section--> 
     <header>
-        <navbar class="navigation">
+        <div class="navigation">
             <div id="logo">RPS <span class="symbols">(</span>LS<span class="symbols">)</span></div>
             <div id="title">
                 <h1>Rock, Paper, Scissors</h1>
             </div>
-            <div> 
-                <button id="help" aria-label="button for reading the rules"><i class="fa-solid fa-question"></i></i></button>
+            <div class="user-button-game">
+              <button class="restart" aria-label="button to restart the game"><i class="fa-solid fa-rotate-right"></i></button>
+              <button id="help" aria-label="button for reading the rules"><i class="fa-solid fa-question"></i></i></button>
             </div>
+          </div>
 <!--Modal screen for rules. This is from W3schools https://www.w3schools.com/howto/howto_css_modals.asp-->
     <div class="modal" >
           <div class="rule-content">
@@ -53,7 +55,6 @@
           </div>
       </div>
       <!--end of modal screen-->
-        </navbar>
     </header>
     <!--main section for the game-->
     <section class="game">
