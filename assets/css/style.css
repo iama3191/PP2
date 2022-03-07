@@ -412,10 +412,11 @@ footer {
   #logo {
     display: block;
     font-size: 3rem;
+    margin-left: 2em;
   }
 
   #title {
-    visibility: hidden;
+    display: none;
   }
 
   .navigation {
