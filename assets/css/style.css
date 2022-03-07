@@ -175,7 +175,6 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 2em auto;
 }
 
 .user-side,
@@ -229,7 +228,6 @@ header {
 
 /*------------------------Score container*/
 #round {
-  margin-top: 0.2em;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
@@ -417,11 +415,6 @@ footer {
     padding-top: 2em;
   }
 
-  .options-container {
-    margin-bottom: 2em;
-    padding-bottom: 1em;
-  }
-
   .user-side,
   .computer-side {
     gap: 4em;
@@ -429,5 +422,13 @@ footer {
 
   #round {
     font-size: 1.2rem;
+  }
+}
+
+/*------------Media query for min-width: 1000px and above*/
+@media screen and (min-width: 1500px) {
+  .options-container {
+    margin: 2em auto;
+    padding-bottom: 1em;
   }
 }
