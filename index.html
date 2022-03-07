@@ -23,38 +23,7 @@
               <button id="help" aria-label="button for reading the rules"><i class="fa-solid fa-question"></i></i></button>
             </div>
           </div>
-<!--Modal screen for rules. This is from W3schools https://www.w3schools.com/howto/howto_css_modals.asp-->
-    <div class="modal" >
-          <div class="rule-content">
-            <div class="modal-header text-center">
-              <h3 class="modal-title">Rock, Paper, Scissors</h3>
-            </div>
-            <div class="modal-body">
-              <p>
-                Click an option from the left-hand column and face your opponent.  
-              </p>
-              <p>
-                <span class="bold">How to win?</span>
-                <ul class="rules">
-                    <li class="rule"><i class="fa-solid fa-hand-scissors"></i> cuts <i class="fa-solid fa-hand"></i></li>
-                    <li class="rule"><i class="fa-solid fa-hand"></i> covers <i class="fa-solid fa-hand-back-fist"></i></li>
-                    <!--<li class="rule"><i class="fa-solid fa-hand-back-fist"></i> crushes <i class="fa-solid fa-hand-lizard"></i></li>
-                    <li class="rule"><i class="fa-solid fa-hand-lizard"></i> poisons <i class="fa-solid fa-hand-spock"></i></li>
-                    <li class="rule"><i class="fa-solid fa-hand-spock"></i> smashes <i class="fa-solid fa-hand-scissors"></i></li>
-                    <li class="rule"><i class="fa-solid fa-hand-scissors"></i> decapitates <i class="fa-solid fa-hand-lizard"></i></li>
-                    <li class="rule"><i class="fa-solid fa-hand-lizard"></i> eats <i class="fa-solid fa-hand"></i></li>
-                    <li class="rule"><i class="fa-solid fa-hand"></i> disproves <i class="fa-solid fa-hand-spock"></i></li>
-                    <li class="rule"><i class="fa-solid fa-hand-spock"></i> vaporizes <i class="fa-solid fa-hand-back-fist"></i></li>-->
-                    <li class="rule"><i class="fa-solid fa-hand-back-fist"></i> crushes <i class="fa-solid fa-hand-scissors"></i></li>
-                </ul>
-              </p>
-            </div>
-            <div class="modal-footer">
-              <button class="back-game" aria-label="button to return to the game">Let's play!</button>
-            </div>
-          </div>
-      </div>
-      <!--end of modal screen-->
+
     </header>
     <!--main section for the game-->
     <section class="game">
@@ -71,6 +40,7 @@
                 </div>
                 <div class="computer-side">
                     <!--computer's options aren't buttons because the computer won't click anything-->
+                    
                     <span class="computer-option" id="rockC"><i class="fa-solid fa-hand-back-fist"></i></span>
                     <span class="computer-option" id="paperC"><i class="fa-solid fa-hand"></i></span>
                     <span class="computer-option" id="scissorsC"><i class="fa-solid fa-hand-scissors"></i></span>
@@ -83,20 +53,12 @@
                 <p>Round: <span id="round-number">0</span></p>
             </div>
             <div class="score-container">
-                <span id="user-score">0</span> :
-                <span id="computer-score">0</span>
+              <span class="user-icon"><i class="fa-solid fa-user"></i> </span><span id="user-score">0</span> 
+              <span class="computer-icon"><i class="fa-solid fa-robot"></i></span>
+                <span id="computer-score">0</span> 
             </div>
         </div>
     </section>
-<!--Modal screen for game over from w3schools https://www.w3schools.com/howto/howto_css_modals.asp-->
-    <div class="modal game-results">
-      <div class="results-content">
-        <h2 id="results-title">Game Over!!</h2>
-        <p id="game-over-text">texto</p>
-        <button class="start" aria-label="button for trying new game">Try again</button>
-      </div>
-    </div>
-<!--end of modal game-->
 
     <!--footer-->
     <footer>
@@ -105,10 +67,53 @@
       </div>
     </footer>
 
+    <!--Modal screen for rules. This is from W3schools https://www.w3schools.com/howto/howto_css_modals.asp-->
+    <div class="modal" >
+      <div class="rule-content">
+        <div class="modal-header text-center">
+          <h3 class="modal-title">Rock, Paper, Scissors</h3>
+        </div>
+        <div class="modal-body">
+          <p>
+            Click an option from the left-hand column and face your opponent.  
+          </p>
+          <p>
+            <span class="bold">How to win?</span>
+            <ul class="rules">
+                <li class="rule"><i class="fa-solid fa-hand-scissors"></i> cuts <i class="fa-solid fa-hand"></i></li>
+                <li class="rule"><i class="fa-solid fa-hand"></i> covers <i class="fa-solid fa-hand-back-fist"></i></li>
+                <!--<li class="rule"><i class="fa-solid fa-hand-back-fist"></i> crushes <i class="fa-solid fa-hand-lizard"></i></li>
+                <li class="rule"><i class="fa-solid fa-hand-lizard"></i> poisons <i class="fa-solid fa-hand-spock"></i></li>
+                <li class="rule"><i class="fa-solid fa-hand-spock"></i> smashes <i class="fa-solid fa-hand-scissors"></i></li>
+                <li class="rule"><i class="fa-solid fa-hand-scissors"></i> decapitates <i class="fa-solid fa-hand-lizard"></i></li>
+                <li class="rule"><i class="fa-solid fa-hand-lizard"></i> eats <i class="fa-solid fa-hand"></i></li>
+                <li class="rule"><i class="fa-solid fa-hand"></i> disproves <i class="fa-solid fa-hand-spock"></i></li>
+                <li class="rule"><i class="fa-solid fa-hand-spock"></i> vaporizes <i class="fa-solid fa-hand-back-fist"></i></li>-->
+                <li class="rule"><i class="fa-solid fa-hand-back-fist"></i> crushes <i class="fa-solid fa-hand-scissors"></i></li>
+            </ul>
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button class="back-game" aria-label="button to return to the game">Let's play!</button>
+        </div>
+      </div>
+  </div>
+  <!--end of modal screen-->
+
+  <!--Modal screen for game over from w3schools https://www.w3schools.com/howto/howto_css_modals.asp-->
+  <div class="modal game-results">
+    <div class="results-content">
+      <h2 id="results-title">Game Over!!</h2>
+      <p id="game-over-text">texto</p>
+      <button class="start" aria-label="button for trying new game">Try again</button>
+    </div>
+  </div>
+<!--end of modal game-->
+
       <!--link for fontawesome-->
       <script src="https://kit.fontawesome.com/5cf6f031a9.js" crossorigin="anonymous"></script>
    <!-- JavaScript Bundle with Popper -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
 <!--link for script file-->
     <script src="./assets/js/script.js"></script>
 </body>

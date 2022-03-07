@@ -85,8 +85,8 @@ header {
 
 #help {
   background-color: var(--dark-bg);
-  width: 26px;
-  height: 26px;
+  width: 30px;
+  height: 30px;
   border-radius: 20px;
   border: 2px solid var(--highlight-elements);
   transition: transform 1s;
@@ -259,9 +259,9 @@ header {
 
 /*------------------------Score container*/
 #round {
+  margin-top: 1em;
   margin-left: auto;
   margin-right: auto;
-  text-align: center;
   font-family: var(--titles);
   font-size: 0.8rem;
   width: fit-content;
@@ -269,14 +269,26 @@ header {
 }
 
 .score-container {
-  width: 40%;
+  display: flex;
+  justify-content: space-around;
+  width: 70%;
+  max-width: 300px;
   margin-left: auto;
   margin-right: auto;
   padding: 0.2em 0.5em;
-  text-align: center;
   font-size: 1.3rem;
+  color: var(--dark-bg);
+  background-color: rgb(245, 222, 179);
 }
 
+#user-score {
+  margin-right: auto;
+}
+
+.user-icon,
+.computer-icon {
+  margin-right: 0.3em;
+}
 /*--------------------modal screen for game over*/
 
 .results-content {

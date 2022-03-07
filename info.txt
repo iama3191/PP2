@@ -4,3 +4,6 @@ user: <i class="fa-solid fa-user"></i>
 computer: <i class="fa-solid fa-robot"></i>
 
 [iTerm2](https://iterm2.com/)
+
+<span class="computer-icon"><i class="fa-solid fa-robot"></i></span>
+<span class="user-icon"><i class="fa-solid fa-user"></i></span>
