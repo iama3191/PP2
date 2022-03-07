@@ -5,18 +5,21 @@ const gameOptions = ['rock','paper','scissors'];
 //Wait for the DOM to finish loading before running the game
 //Get the button elements and add event listeners to them
 document.addEventListener('DOMContentLoaded', function() {
-    let buttons = document.getElementsByTagName('button');
+    const buttons = document.querySelectorAll('.user-option');
+    const helpButton = document.querySelector('#help');
+
+    helpButton.addEventListener('click', function () {
+        showHelp();
+    })
 
     for (let button of buttons) {
 
         button.addEventListener('click', function() {
-            if(this.getAttribute('id')==='help') {
-                showHelp();
-            } else {
+            
                 let optionType = this.getAttribute('id');
             console.log(`1 user's choice is ${optionType}`)
             mainGame(optionType); 
-            }
+         
         })
     }
 })
@@ -24,11 +27,11 @@ document.addEventListener('DOMContentLoaded', function() {
 //Function to show modal screen for the help button
 function showHelp() {
 
-    const backToGame = document.getElementsByClassName('back-game')[0];
-    document.getElementsByClassName('modal')[0].style.display = 'block';
+    const backToGame = document.querySelector('.back-game');
+    document.querySelector('.modal').style.display = 'block';
 
     backToGame.addEventListener('click', function () {
-        document.getElementsByClassName('modal')[0].style.display = 'none';
+        document.querySelector('.modal').style.display = 'none';
     })
 }
 
@@ -61,7 +64,7 @@ function mainGame(userChoice) {
 function computerLoses(computer) {
 
     if (computer === 'rock') {
-        document.getElementById('rockC').classList.add('lose-computer');
+        document.getElementById('#rockC').classList.add('lose-computer');
         setTimeout(function (){ document.getElementById('rockC').classList.remove('lose-computer')
     }, 500);
     }
@@ -183,9 +186,9 @@ function gameOver() {
   const finalComputerScore = parseInt(document.getElementById('computer-score').textContent);
 
   //this is for the modal screen that will be shown after game over
-  const answerBox = document.getElementsByClassName('game-results')[0];
+  const answerBox = document.querySelector('.game-results');
   const battleText = document.getElementById('game-over-text');
-  let restart = document.getElementsByClassName('start')[0];
+  let restart = document.querySelector('.start');
 
   answerBox.style.display = 'block';
 
