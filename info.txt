@@ -2,3 +2,5 @@ Icons for user and computer (from fontawesome)
 
 user: <i class="fa-solid fa-user"></i>
 computer: <i class="fa-solid fa-robot"></i>
+
+[iTerm2](https://iterm2.com/)
