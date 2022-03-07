@@ -369,6 +369,10 @@ footer {
     width: 90%;
   }
 
+  #title {
+    font-size: 1.4rem;
+  }
+
   .user-option,
   .computer-option {
     font-size: 4rem;
@@ -407,6 +411,11 @@ footer {
 @media screen and (min-width: 768px) {
   #logo {
     display: block;
+    font-size: 3rem;
+  }
+
+  #title {
+    visibility: hidden;
   }
 
   .navigation {
@@ -419,7 +428,7 @@ footer {
   }
 
   .options-container {
-    margin-bottom: 1em;
+    margin-bottom: 2em;
     padding-bottom: 1em;
   }
 
@@ -428,7 +437,7 @@ footer {
     gap: 4em;
   }
 
-  #title {
-    visibility: hidden;
+  #round {
+    font-size: 1.2rem;
   }
 }
