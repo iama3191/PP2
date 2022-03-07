@@ -73,7 +73,8 @@ header {
 
 #title {
   font-family: var(--titles);
-  padding-left: 2em;
+  font-size: 0.8rem;
+  padding-left: 2.4em;
 }
 
 #help {
@@ -87,6 +88,7 @@ header {
 
 .fa-question {
   font-size: 1rem;
+  margin: 3px auto;
   color: var(--highlight-elements);
   transition: transform 1s;
 }
@@ -173,6 +175,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin: 2em auto;
 }
 
 .user-side,
@@ -315,6 +318,14 @@ footer {
   color: var(--dark-bg);
 }
 
+.rights-reserved {
+  display: none;
+  margin: 1em 0;
+}
+
+.rights-reserved > p {
+  font-family: var(--titles);
+}
 /*-------------------Effects to announce the results */
 .win-computer {
   background-color: var(--win);
@@ -385,6 +396,10 @@ footer {
 
   .start {
     font-size: 1.3rem;
+  }
+
+  .rights-reserved {
+    display: block;
   }
 }
 
