@@ -7,9 +7,14 @@ const gameOptions = ['rock','paper','scissors'];
 document.addEventListener('DOMContentLoaded', function() {
     const buttons = document.querySelectorAll('.user-option');
     const helpButton = document.querySelector('#help');
+    const restart = document.querySelector('.restart');
 
     helpButton.addEventListener('click', function () {
         showHelp();
+    })
+
+    restart.addEventListener('click', function () {
+        window.location.reload();
     })
 
     for (let button of buttons) {
