@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
     })
 
     restart.addEventListener('click', function () {
-        window.location.reload();
+        newGame();
     })
 
     for (let button of buttons) {
@@ -28,6 +28,13 @@ document.addEventListener('DOMContentLoaded', function() {
         })
     }
 })
+
+function newGame() {
+
+   document.getElementById('user-score').innerText = 0;
+   document.getElementById('computer-score').innerText = 0;
+   document.getElementById('round-number').innerText = 0;
+}
 
 //Function to show modal screen for the help button
 function showHelp() {
@@ -69,7 +76,7 @@ function mainGame(userChoice) {
 function computerLoses(computer) {
 
     if (computer === 'rock') {
-        document.getElementById('#rockC').classList.add('lose-computer');
+        document.getElementById('rockC').classList.add('lose-computer');
         setTimeout(function (){ document.getElementById('rockC').classList.remove('lose-computer')
     }, 500);
     }
@@ -210,6 +217,6 @@ function gameOver() {
       //this will give to the user to restart the game
     restart.addEventListener('click', function() {
         answerBox.style.display = 'none';
-        window.location.reload();
+        newGame();
     })
   } 
