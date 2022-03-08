@@ -21,10 +21,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
         button.addEventListener('click', function() {
             
-                let optionType = this.getAttribute('data-type');
+            let optionType = this.getAttribute('data-type');
             console.log(`1 user's choice is ${optionType}`)
             mainGame(optionType); 
-         
         })
     }
 })
@@ -40,11 +39,13 @@ function newGame() {
 //Function to show modal screen for the help button
 function showHelp() {
 
+    const modalDisplay = document.querySelector('.modal');
     const backToGame = document.querySelector('.back-game');
-    document.querySelector('.modal').style.display = 'block';
+    
+    modalDisplay.style.display = 'block';
 
     backToGame.addEventListener('click', function () {
-        document.querySelector('.modal').style.display = 'none';
+        modalDisplay.style.display = 'none';
     })
 }
 
@@ -80,13 +81,11 @@ function computerLoses(computer) {
         document.getElementById('rockC').classList.add('lose-computer');
         setTimeout(function (){ document.getElementById('rockC').classList.remove('lose-computer')
     }, 500);
-    }
-    if (computer === 'paper') {
+    } else if (computer === 'paper') {
         document.getElementById('paperC').classList.add('lose-computer');
         setTimeout(function (){ document.getElementById('paperC').classList.remove('lose-computer')
     }, 500);
-    }
-    if (computer === 'scissors') {
+    } else {
         document.getElementById('scissorsC').classList.add('lose-computer');
         setTimeout(function (){ document.getElementById('scissorsC').classList.remove('lose-computer')
     }, 500);
@@ -100,13 +99,11 @@ function computerWins(computer) {
         document.getElementById('rockC').classList.add('win-computer');
         setTimeout(function (){ document.getElementById('rockC').classList.remove('win-computer')
     }, 500);
-    }
-    if (computer === 'paper') {
+    } else if (computer === 'paper') {
         document.getElementById('paperC').classList.add('win-computer');
         setTimeout(function (){ document.getElementById('paperC').classList.remove('win-computer')
     }, 500);
-    }
-    if (computer === 'scissors') {
+    } else {
         document.getElementById('scissorsC').classList.add('win-computer');
         setTimeout(function (){ document.getElementById('scissorsC').classList.remove('win-computer')
     }, 500);
@@ -120,13 +117,11 @@ function computerDraws(computer) {
         document.getElementById('rockC').classList.add('draw-computer');
         setTimeout(function (){ document.getElementById('rockC').classList.remove('draw-computer')
     }, 500);
-    }
-    if (computer === 'paper') {
+    } else if (computer === 'paper') {
         document.getElementById('paperC').classList.add('draw-computer');
         setTimeout(function (){ document.getElementById('paperC').classList.remove('draw-computer')
     }, 500);
-    }
-    if (computer === 'scissors') {
+    } else {
         document.getElementById('scissorsC').classList.add('draw-computer');
         setTimeout(function (){ document.getElementById('scissorsC').classList.remove('draw-computer')
     }, 500);
