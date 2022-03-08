@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         button.addEventListener('click', function() {
             
-                let optionType = this.getAttribute('id');
+                let optionType = this.getAttribute('data-type');
             console.log(`1 user's choice is ${optionType}`)
             mainGame(optionType); 
          
@@ -29,6 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 })
 
+//function to restart the game 
 function newGame() {
 
    document.getElementById('user-score').innerText = 0;
