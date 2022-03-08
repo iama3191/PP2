@@ -85,34 +85,35 @@ header {
 
 #help {
   background-color: var(--dark-bg);
-  width: 30px;
-  height: 30px;
-  border-radius: 20px;
   border: 2px solid var(--highlight-elements);
-  transition: transform 1s;
 }
 
 .restart {
   background-color: var(--lose);
-  border-radius: 20px;
-  width: 30px;
-  height: 30px;
   border: 2px solid var(--light);
   margin-right: 1em;
-  transition: transform 1s;
 }
 
-.fa-rotate-right {
-  color: var(--light);
-  margin: 3px auto;
-  font-size: 1rem;
+#help,
+.restart {
+  width: 26px;
+  height: 26px;
+  border-radius: 20px;
   transition: transform 1s;
 }
 
 .fa-question {
-  font-size: 1rem;
-  margin: 3px auto;
   color: var(--highlight-elements);
+}
+
+.fa-rotate-right {
+  color: var(--light);
+}
+
+.fa-rotate-right,
+.fa-question {
+  font-size: 0.8rem;
+  margin: 3px auto;
   transition: transform 1s;
 }
 
@@ -225,7 +226,7 @@ header {
   background-color: var(--dark-bg);
   border: 4px solid var(--light);
   transition: transform 1s;
-  box-shadow: 0 0 9px 6px var(--highlight-elements);
+  box-shadow: 0 0 6px 4px var(--highlight-elements);
 }
 
 .user-option > i {
@@ -259,7 +260,7 @@ header {
 
 /*------------------------Score container*/
 #round {
-  margin-top: 1em;
+  margin-top: 1.4em;
   margin-left: auto;
   margin-right: auto;
   font-family: var(--titles);
@@ -440,7 +441,6 @@ footer {
 @media screen and (min-width: 768px) {
   #logo {
     display: block;
-
     margin-left: 2em;
   }
 
@@ -457,6 +457,16 @@ footer {
     padding-top: 2em;
   }
 
+  #help,
+  .restart {
+    width: 30px;
+    height: 30px;
+  }
+
+  .fa-rotate-right,
+  .fa-question {
+    font-size: 1.2em;
+  }
   .user-side,
   .computer-side {
     gap: 4em;
